@@ -26,7 +26,10 @@ api = KiwoomAPI()
 @app.get("/api/balance")
 def get_balance():
     """계좌 잔고 + 보유종목"""
-    return api.get_account_balance()
+    try:
+        return api.get_account_balance()
+    except Exception as e:
+        return {"error": str(e)}
 
 
 # ── 종목 검색 ──
