@@ -13,7 +13,7 @@ import os
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.environ.get("CORS_ORIGINS", "http://localhost:5173,https://kidstock.vercel.app").split(","),
+    allow_origins=os.environ.get("CORS_ORIGINS", "http://localhost:5173,https://kid-stock.vercel.app,https://kid-stock-git-main-wonjheo-rgbs-projects.vercel.app,https://kid-stock-62ie1pea4-wonjheo-rgbs-projects.vercel.app").split(","),
     allow_methods=["*"],
     allow_headers=["*"],
 )
