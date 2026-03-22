@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4A90D9;
+  --color-primary-dark: #3A78C2;
+  --color-gain: #22C55E;
+  --color-gain-bg: #f0fdf4;
+  --color-loss: #EF4444;
+  --color-loss-bg: #fef2f2;
+  --color-bg: #F8FAFC;
+  --color-card: #FFFFFF;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg);
+  margin: 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  position: relative;
+}
