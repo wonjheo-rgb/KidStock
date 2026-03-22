@@ -116,3 +116,14 @@ def remove_watchlist(stock_code: str):
 def health():
     """서버 상태 확인"""
     return {"status": "ok"}
+
+
+@app.get("/api/server-ip")
+def server_ip():
+    """서버의 outbound IP 확인"""
+    import requests
+    try:
+        resp = requests.get("https://api.ipify.org?format=json", timeout=5)
+        return resp.json()
+    except:
+        return {"error": "IP 확인 실패"}
